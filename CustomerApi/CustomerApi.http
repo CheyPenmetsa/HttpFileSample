@@ -1,0 +1,27 @@
+@CustomerApi_HostAddress = http://localhost:5121
+
+GET {{CustomerApi_HostAddress}}/api/Customer
+Accept: application/json
+
+###
+
+POST {{CustomerApi_HostAddress}}/api/customer
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "age": 25,
+  "email": "jd@gmail.com",
+  "address": "123 Main Street"
+}
+
+###
+
+DELETE {{CustomerApi_HostAddress}}/api/customer?customerId=12
+x-api-key: yo
+###
+
+GET {{CustomerApi_HostAddress}}/api/customer/2
+
+###
